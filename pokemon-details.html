@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pokémon Details</title>
+    <script>
+      // Extract the Pokémon name or ID from the URL parameter
+      const urlParams = new URLSearchParams(window.location.search);
+      const pokemonName = urlParams.get('pokemon');
+
+      // Fetch the detailed information of the Pokémon
+      const url = `https://pokeapi.co/api/v2/pokemon/${pokemonId}`;
+      fetch(url)
+        .then((res) => res.json())
+        .then((data) => {
+          // Process the data and display the in-depth information on the page
+          // Replace the following console.log with your code to display the information
+          console.log(data);
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+    </script>
+  </head>
+  <body>
+    <h1>Pokémon Details</h1>
+    <!-- Add HTML elements to display the in-depth information -->
+  </body>
+</html>
