@@ -1,28 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Pokémon Details</title>
-    <script>
-      // Extract the Pokémon name or ID from the URL parameter
-      const urlParams = new URLSearchParams(window.location.search);
-      const pokemonName = urlParams.get('pokemon');
-
-      // Fetch the detailed information of the Pokémon
-      const url = `https://pokeapi.co/api/v2/pokemon/${pokemonId}`;
-      fetch(url)
-        .then((res) => res.json())
-        .then((data) => {
-          // Process the data and display the in-depth information on the page
-          // Replace the following console.log with your code to display the information
-          console.log(data);
-        })
-        .catch((error) => {
-          console.error('Error:', error);
-        });
-    </script>
-  </head>
-  <body>
-    <h1>Pokémon Details</h1>
-    <!-- Add HTML elements to display the in-depth information -->
-  </body>
+<head>
+  <title>Weather Report</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script defer src="/js/script.js"></script>
+</head>
+<body>
+  <h1>Weather Report</h1>
+  <form>
+    <input type="text" id="cityInput" placeholder="Enter city name">
+    <button type="submit">Get Weather</button>
+  </form>
+  <div id="weatherData">
+    <h2 id="city"></h2>
+    <p>Temperature: <span id="temp"></span>&deg;F</p>
+    <p>Feels Like: <span id="feels"></span>&deg;F</p>
+    <p>Weather: <span id="report"></span></p>
+    <p>Suggested Drink: <span id="drink"></span></p>
+  </div>
+</body>
 </html>
